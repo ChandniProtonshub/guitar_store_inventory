@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Guitar Picks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Guitar</th>
+      <th>For guitar type</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guitar_picks.each do |guitar_pick| %>
+      <tr>
+        <td><%= guitar_pick.guitar %></td>
+        <td><%= guitar_pick.for_guitar_type %></td>
+        <td><%= guitar_pick.user %></td>
+        <td><%= link_to 'Show', guitar_pick %></td>
+        <td><%= link_to 'Edit', edit_guitar_pick_path(guitar_pick) %></td>
+        <td><%= link_to 'Destroy', guitar_pick, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Guitar Pick', new_guitar_pick_path %>

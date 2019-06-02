@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guitar:</strong>
+  <%= @guitar_pick.guitar %>
+</p>
+
+<p>
+  <strong>For guitar type:</strong>
+  <%= @guitar_pick.for_guitar_type %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @guitar_pick.user %>
+</p>
+
+<%= link_to 'Edit', edit_guitar_pick_path(@guitar_pick) %> |
+<%= link_to 'Back', guitar_picks_path %>

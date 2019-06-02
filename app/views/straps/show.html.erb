@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guitar:</strong>
+  <%= @strap.guitar %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @strap.user %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @strap.size %>
+</p>
+
+<p>
+  <strong>In stock quantity:</strong>
+  <%= @strap.in_stock_quantity %>
+</p>
+
+<%= link_to 'Edit', edit_strap_path(@strap) %> |
+<%= link_to 'Back', straps_path %>

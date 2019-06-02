@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guitar: one
+  user: one
+  size: MyString
+  in_stock_quantity: 1
+
+two:
+  guitar: two
+  user: two
+  size: MyString
+  in_stock_quantity: 1

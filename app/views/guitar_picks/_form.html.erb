@@ -1,0 +1,32 @@
+<%= form_with(model: guitar_pick, local: true) do |form| %>
+  <% if guitar_pick.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guitar_pick.errors.count, "error") %> prohibited this guitar_pick from being saved:</h2>
+
+      <ul>
+      <% guitar_pick.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :guitar_id %>
+    <%= form.text_field :guitar_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :for_guitar_type %>
+    <%= form.number_field :for_guitar_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
